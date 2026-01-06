@@ -1,0 +1,114 @@
+
+body {
+  margin: 0;
+  background-color: #f0fdf4;
+  color: #020617;
+  font-weight: normal;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.navbar h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+  letter-spacing: 0.5px;
+  color: #020617;
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+button {
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 9px 13px;
+  border-radius: 100px;
+  background: #00c950;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #c4e201;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+/* Desktop nav */
+.desktop-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #334155;
+  font-weight:500;
+
+.desktop-nav a:hover {
+  color: #020617;
+}
+
+/* Mobile menu */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
