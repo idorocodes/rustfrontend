@@ -4,18 +4,13 @@ use stylance::import_style;
 
 
 pub fn Nav() -> impl IntoView {
-    let (is_menu_open, set_is_menu_open) = signal(false);
-
-    let toggle_menu = move || {
-        set_is_menu_open.update(|v| *v = !*v);
-    };
-
+    
     view! {
         <header  class= "header">
             <nav class="navbar">
-                <h1>"Slink"</h1>
+                <h1>"Leptos Starter"</h1>
                     <DesktopNav/>
-                    <button> "Send a slink" </button>
+                    <button> "Start building" </button>
             </nav>
             
            

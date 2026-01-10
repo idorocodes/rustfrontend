@@ -1,4 +1,4 @@
-use leptos::{prelude::*, svg::view};
+use leptos::prelude::*;
 mod nav;
 use nav::*;
 mod hero;
@@ -17,7 +17,6 @@ fn App () ->  impl IntoView {
     <Nav/>
     <main>
     <Hero/>
-    <p> "Hello World" </p>   
     </main>
     
     }

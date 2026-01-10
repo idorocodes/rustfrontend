@@ -3,8 +3,7 @@ body {
   margin: 0;
   background-color: #f0fdf4;
   color: #020617;
-  font-weight: normal;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -17,51 +16,36 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-
 .navbar {
-    background-color: white;
-    border-bottom: 1px solid #e5e7eb;
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
 }
 
 .navbar h1 {
-    font-size: 1.6rem;
-    font-weight: normal;
-  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #020617;
 }
 
 
-/* From Uiverse.io by alexmaracinaru */ 
 button {
   cursor: pointer;
-  transition: all 0.2s;
   padding: 9px 13px;
   border-radius: 100px;
   background: #00c950;
-  border: 1px solid transparent;
+  border: none;
   display: flex;
   align-items: center;
   color: white;
   font-size: 15px;
+  transition: all 0.2s ease;
 }
 
 button:hover {
-  background: #c4e201;
-}
-
-button > svg {
-  width: 34px;
-  margin-left: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-button:hover svg {
-  transform: translateX(5px);
+  background: #00c250;
 }
 
 button:active {
@@ -69,28 +53,31 @@ button:active {
 }
 
 
-/* Desktop nav */
 .desktop-nav {
-  display: flex;
+  display: none;
   gap: 1.5rem;
 }
 
 .desktop-nav a {
   text-decoration: none;
   color: #334155;
-  font-weight:500;
+  font-weight: 500;
+}
 
 .desktop-nav a:hover {
   color: #020617;
 }
 
-/* Mobile menu */
+
+.menu-btn {
+  display: block;
+}
+
 .mobile-nav {
   position: fixed;
   inset: 0;
   background: #020617;
   padding: 2rem;
-
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -102,13 +89,80 @@ button:active {
   text-decoration: none;
 }
 
-/* Responsive */
+
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 1.25rem;
+}
+
+.heroheader {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 900px;
+  color: #00c950;
+}
+
+.herosub {
+  font-size: 1rem;
+  max-width: 600px;
+  color: #020617;
+}
+
+.herometa {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.heroactions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primary-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  border-radius: 0.6rem;
+  background: #00c950;
+  color: white;
+  border: none;
+}
+
+
 @media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+
   .menu-btn {
     display: none;
   }
 
   .mobile-nav {
     display: none;
+  }
+
+  .herosub {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  .heroactions {
+    gap: 1rem;
   }
 }
